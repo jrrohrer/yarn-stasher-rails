@@ -7,7 +7,7 @@ class CreateYarns < ActiveRecord::Migration[6.1]
       t.string :weight
       t.integer :yardage
       t.integer :quantity
-      t.belongs_to :user, foreign_key: true
+      t.belongs_to :user, null: false, foreign_key: true
       t.belongs_to :project, foreign_key: true
 
       t.timestamps
