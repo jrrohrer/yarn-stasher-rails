@@ -2,7 +2,7 @@
 
 ## Models
 
-* User
+[x]* User
 	-Attributes
     -PK: user_id
 		-username
@@ -16,7 +16,7 @@
 	-Validations
 		-has_secure_password
 
-* Yarn 
+[x]* Yarn 
 	-Attributes
     -PK: yarn_id
     -FK: user_id 
@@ -32,7 +32,7 @@
 		-belongs_to :project
 	-Validations
 	
-* Project
+[x]* Project
 	-Attributes
     -PK: project_id
     -FK: user_id
@@ -40,7 +40,6 @@
 		-pattern_name
 		-designer
 		-craft
-		-yarn
 		-tool_size
 	-Associations
 		belongs_to :user
@@ -49,7 +48,7 @@
 		has_many :users, through: :comments
 	-Validations
 
-* Comments (MAIN JOIN)
+[x]* Comments (MAIN JOIN)
 	-Attributes
 		content
 	-Associations
