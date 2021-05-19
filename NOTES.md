@@ -151,4 +151,5 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - tested ActiveRecord associations in Rails console to make sure they work
 
   5/19
-    - added root route and Home view.
+    - added sessions controller & sessions views folder
+    - added root route 'sessions#home' and accompanying view
