@@ -153,3 +153,6 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
   5/19
     - added sessions controller & sessions views folder
     - added root route 'sessions#home' and accompanying view
+    - added validations to User model
+    - built out signup functionality
+    - built out login functionality
