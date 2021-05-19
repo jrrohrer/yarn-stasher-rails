@@ -86,3 +86,69 @@
 	
 Resources:
 https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
+
+## Methods From ActiveRecord Associations
+  * belongs_to
+    association
+    association=(associate)
+    build_association(attributes = {})
+    create_association(attributes = {})
+    create_association!(attributes = {})
+    reload_association
+
+  * has_many
+    collection
+    collection<<(object, ...)
+    collection.delete(object, ...)
+    collection.destroy(object, ...)
+    collection=(objects)
+    collection_singular_ids
+    collection_singular_ids=(ids)
+    collection.clear
+    collection.empty?
+    collection.size
+    collection.find(...)
+    collection.where(...)
+    collection.exists?(...)
+    collection.build(attributes = {})
+    collection.create(attributes = {})
+    collection.create!(attributes = {})
+    collection.reload
+
+  * has_many :through
+    collection
+    collection=(obj, obj, ...)
+    collection_ids
+    collection_ids=(id, id, ...)
+    collection<<
+    collection.push
+    collection.concat
+    collection.build(attributes)
+    collection.create(attributes)
+    collection.create!(attributes)
+    collection.size
+    collection.length
+    collection.count
+    collection.sum(*args)
+    colection.empty?
+    collection.clear
+    collection.delete(obj, obj, ...)
+    collection.delete_all
+    collection.destroy(obj, obj, ...)
+    collection.destroy_all
+    collection.find(*args)
+    collection.exists?
+    collection.distinct
+    collection.reset
+    collection.reload
+
+## Progress
+  5/18
+    - created resources for all 4 models
+    - added associations to all 4 models
+    - migrated database
+    - added seed data
+    - tested ActiveRecord associations in Rails console to make sure they work
+
+  5/19
+    - added root route and Home view.
