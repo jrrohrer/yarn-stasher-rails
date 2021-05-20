@@ -3,7 +3,6 @@ class SessionsController < ApplicationController
   end
 
   def new
-    
   end
 
   def create
@@ -15,5 +14,10 @@ class SessionsController < ApplicationController
       # add flash message here
       redirect_to '/login'
     end
+  end
+
+  def destroy
+    session.clear
+    redirect_to '/'
   end
 end

@@ -156,3 +156,7 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - added validations to User model
     - built out signup functionality
     - built out login functionality
+
+  5/20
+    - built out logout functionality
+      - added nav to application layout
