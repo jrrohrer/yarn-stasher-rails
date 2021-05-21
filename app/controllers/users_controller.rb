@@ -17,6 +17,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
+    @yarns = Yarn.all.select {|yarn| yarn.user_id == session[:user_id]} 
   end
 
   private

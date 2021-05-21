@@ -1,0 +1,23 @@
+<h1>Create a New Yarn</h1>
+
+<%= form_for(@yarn) do |f| %>
+  <%= f.label :brand_name %><br>
+  <%= f.text_field :brand_name %><br>
+
+  <%= f.label :color_way %><br>
+  <%= f.text_field :colorway %><br>
+
+  <%= f.label :fiber %><br>
+  <%= f.text_field :fiber %><br>
+
+  <%= f.label :weight %><br>
+  <%= f.text_field :weight %><br>
+
+  <%= f.label :yardage %><br>
+  <%= f.text_field :yardage %><br>
+
+  <%= f.label :quantity %><br>
+  <%= f.text_field :quantity %><br>
+
+  <%= f.submit "Create New Yarn" %>
+<% end %>

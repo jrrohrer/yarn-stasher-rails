@@ -164,4 +164,7 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
   5/21
     - added flash message to sessions#create and sessions/new for login errors
     - added error handling to sign up page
+    - added form for creating a new yarn
+    - added a table of yarns to user's show page
+    - added data display to individual yarn show page
     

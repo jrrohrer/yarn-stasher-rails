@@ -1,1 +1,25 @@
 <h1><%= @user.username %>'s Profile</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Brand</a></th>
+            <th>Colorway</a></th>
+            <th>Fiber</a></th>
+            <th>Weight</a></th>
+            <th>Yardage</a></th>
+            <th>Quantity</a></th>
+        </tr>
+    </thead>
+    <% @yarns.each do |yarn|%>
+        <tr>
+            <td><%= yarn.brand_name %></a></td>
+            <td><%= yarn.colorway %></td>
+            <td><%= yarn.fiber %></td>
+            <td><%= yarn.weight %></td>
+            <td><%= yarn.yardage %></td>
+            <td><%= yarn.quantity %></td>
+            
+        </tr>
+    <% end %>
+</table>
