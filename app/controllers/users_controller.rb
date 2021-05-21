@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
-      # add flash message here
+      @error = @user.errors.full_messages
       render :new
     end
   end

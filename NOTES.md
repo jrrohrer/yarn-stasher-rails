@@ -160,3 +160,8 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
   5/20
     - built out logout functionality
       - added nav to application layout
+
+  5/21
+    - added flash message to sessions#create and sessions/new for login errors
+    - added error handling to sign up page
+    

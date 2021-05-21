@@ -1,4 +1,11 @@
 <h1>Sign Up</h2>
+<% if @error %>
+  <% @error.each do |msg| %>
+    <ul>
+      <li><%= msg %></li>
+    </ul>
+  <% end %>
+<% end %>
 
 <%= form_for(@user) do |f| %>
   <%= f.label :username %><br>
