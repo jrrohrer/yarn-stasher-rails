@@ -2,11 +2,12 @@ class YarnsController < ApplicationController
 
   def new
     @yarn = Yarn.new
+    @yarn.build_project
   end
 
   def create
-    byebug
     @yarn = Yarn.new(yarn_params)
+    @yarn.user_id = session[:user_id]
     @yarn.save
     if @yarn.save
       redirect_to yarn_path(@yarn)
@@ -29,7 +30,16 @@ class YarnsController < ApplicationController
       :fiber, 
       :weight, 
       :yardage, 
-      :quantity
+      :quantity,
+      :user_id,
+      :project_id
+      #project_attributes: [
+       # :title,
+       # :pattern_name,
+       # :designer,
+       # :craft,
+       # :tool_size
+      #]
     )
   end
 end

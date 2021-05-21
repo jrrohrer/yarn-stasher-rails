@@ -19,5 +19,27 @@
   <%= f.label :quantity %><br>
   <%= f.text_field :quantity %><br>
 
+  <p>Select an Existing Project</p>
+  <%= f.collection_select :project_id, Project.all, :id, :title %>
+
+  <!-- <p>Or Create a new Project</p>
+    <%= f.fields_for :project do |p| %>
+      <%= p.label :title %><br>
+      <%= p.text_field :title %><br>
+
+      <%= p.label :pattern_name %><br>
+      <%= p.text_field :pattern_name %><br>
+
+      <%= p.label :designer %><br>
+      <%= p.text_field :designer %><br>
+
+      <%= p.label :craft %><br>
+      <%= p.text_field :craft %><br>
+
+      <%= p.label :tool_size %><br>
+      <%= p.text_field :tool_size %><br>
+
+    <% end %> -->
+
   <%= f.submit "Create New Yarn" %>
 <% end %>
