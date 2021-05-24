@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   
 
   resources :comments
-  resources :projects
+  resources :projects do 
+    resources :comments, only: [:new, :show, :edit]
+  end
   resources :yarns
   resources :users
 

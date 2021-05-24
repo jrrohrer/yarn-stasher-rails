@@ -170,6 +170,11 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
 
   5/24
     - fixed create yarn form (new yarns weren't being created if they weren't associated to a project)
+    - added projects/new page w/form
+    - added projects/id/show page
+    - added projects/id/edit page
+    - added projects/ index page
+
     - thinking about nested routes:
       - nest yarns under projects?
         - would give me route(s) for looking at yarns associated to a project: /projects/:id/yarns
