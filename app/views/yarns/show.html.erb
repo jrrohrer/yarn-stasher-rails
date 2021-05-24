@@ -8,5 +8,7 @@ Weight: <%= @yarn.weight %><br>
 Yardage: <%= @yarn.yardage %><br>
 Quantity: <%= @yarn.quantity %><br>
 Owner: <%= @yarn.user.username %><br>
-Associated Project: <%= @yarn.project.title %>
+<% if @yarn.project %>
+  Associated Project: <%= @yarn.project.title %>
+<% end  %>
 </p>

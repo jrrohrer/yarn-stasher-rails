@@ -7,17 +7,18 @@ class YarnsController < ApplicationController
 
   def create
     @yarn = Yarn.new(yarn_params)
-    @yarn.user_id = session[:user_id]
+    @yarn.user_id = session[:user_id] #yarn being created should automatically belong to the user creating it
     @yarn.save
     if @yarn.save
       redirect_to yarn_path(@yarn)
     else
-      #redirect_to new_yarn_path
+      redirect_to new_yarn_path
     end
   end
 
   def show
-    @yarn = Yarn.find_by(params[:yarn_id])
+    byebug
+    @yarn = Yarn.find_by(id: params[:id])
   end
 
 
