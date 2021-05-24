@@ -1,0 +1,19 @@
+<h1><%= @project.title %></h1>
+<p>Pattern Name: <%= @project.pattern_name %></p>
+<p>Designer: <%= @project.designer %></p>
+<p>Craft: <%= @project.craft %></p>
+<p>Tool Size: <%= @project.tool_size %></p>
+
+<h2>Yarns Used:</h2>
+<% if @project.yarns %>
+  <% @project.yarns.each do |yarn| %>
+    <p>Brand Name: <%= yarn.brand_name %></p>
+    <p>Colorway: <%= yarn.colorway %></p>
+    <p>Fiber: <%= yarn.fiber %></p>
+    <p>Weight: <%= yarn.weight %></p>
+    <p>Yardage: <%= yarn.yardage %></p>
+    <p>Quantity: <%= yarn.quantity %></p>
+  <% end %>
+<% end %>
+
+<%= link_to 'Edit This Project', edit_project_path(@project) %>

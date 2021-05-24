@@ -167,4 +167,16 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - added form for creating a new yarn
     - added a table of yarns to user's show page
     - added data display to individual yarn show page
-    
+
+  5/24
+    - fixed create yarn form (new yarns weren't being created if they weren't associated to a project)
+    - thinking about nested routes:
+      - nest yarns under projects?
+        - would give me route(s) for looking at yarns associated to a project: /projects/:id/yarns
+        - or I could just link back to the individual yarn show pages? Or just display this data on the project's show page?
+      - nest comments under projects?
+        - would give me routes for commenting, since comments can't exist without being owned by both a project and a user:
+            - '/projects/:id/comments (all comments for a project)
+            - '/projects/:id/comments/new (create a new comment for a project)
+            - '/projects/:id/comments/:id (view an individual comment)
+            - '/projects/:id/comments/edit (edit an existing comment)
