@@ -11,7 +11,8 @@ Rails.application.routes.draw do
 
   resources :comments
   resources :projects do 
-    resources :comments, only: [:new, :show, :edit]
+    resources :comments, shallow: true
+    # gives me shallow routing for the nested comments resource: index, new, and edit only. 
   end
   resources :yarns
   resources :users

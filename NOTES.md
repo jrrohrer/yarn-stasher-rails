@@ -172,8 +172,11 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - fixed create yarn form (new yarns weren't being created if they weren't associated to a project)
     - added projects/new page w/form
     - added projects/id/show page
-    - added projects/id/edit page
+    - added projects/id/edit page w/form
     - added projects/ index page
+    - added nested routing: comments under projects. Shallow only
+    - added comments/new form
+    - started comments/id/show page
 
     - thinking about nested routes:
       - nest yarns under projects?
@@ -185,3 +188,7 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
             - '/projects/:id/comments/new (create a new comment for a project)
             - '/projects/:id/comments/:id (view an individual comment)
             - '/projects/:id/comments/edit (edit an existing comment)
+
+REFACTORING THOUGHTS
+
+  - new/edit forms should be made into partials for yarns & projects
