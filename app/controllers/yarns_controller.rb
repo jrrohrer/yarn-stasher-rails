@@ -17,8 +17,18 @@ class YarnsController < ApplicationController
   end
 
   def show
-    byebug
     @yarn = Yarn.find_by(id: params[:id])
+  end
+
+  def edit
+    @yarn = Yarn.find_by(id: params[:id])
+  end
+
+  def update
+    # add protection so only user who owns yarn can edit it
+    yarn = Yarn.find_by(id: params[:id])
+    yarn.update(yarn_params)
+    redirect_to yarn_path(yarn)
   end
 
 

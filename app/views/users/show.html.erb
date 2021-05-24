@@ -1,5 +1,7 @@
 <h1><%= @user.username %>'s Profile</h1>
 
+<%= link_to 'Add New Yarn', new_yarn_path %> | <%= link_to 'Add New Project', new_project_path %>
+
 <table>
     <thead>
         <tr>
@@ -13,7 +15,7 @@
     </thead>
     <% @yarns.each do |yarn|%>
         <tr>
-            <td><%= yarn.brand_name %></a></td>
+            <td><%= link_to yarn.brand_name, yarn_path(yarn) %></td>
             <td><%= yarn.colorway %></td>
             <td><%= yarn.fiber %></td>
             <td><%= yarn.weight %></td>

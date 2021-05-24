@@ -1,14 +1,14 @@
 <h1>Yarn Details</h1>
 
-<p>
-Brand Name: <%= @yarn.brand_name %><br>
-Colorway: <%= @yarn.colorway %><br>
-Fiber: <%= @yarn.fiber %><br>
-Weight: <%= @yarn.weight %><br>
-Yardage: <%= @yarn.yardage %><br>
-Quantity: <%= @yarn.quantity %><br>
-Owner: <%= @yarn.user.username %><br>
+
+<p>Brand Name: <%= @yarn.brand_name %></p>
+<p>Colorway: <%= @yarn.colorway %></p>
+<p>Fiber: <%= @yarn.fiber %></p>
+<p>Weight: <%= @yarn.weight %></p>
+<p>Yardage: <%= @yarn.yardage %></p>
+<p>Quantity: <%= @yarn.quantity %></p>
 <% if @yarn.project %>
-  Associated Project: <%= @yarn.project.title %>
+  <p>Associated Project: <%= @yarn.project.title %></p>
 <% end  %>
-</p>
+
+<%= link_to 'Edit This Yarn', edit_yarn_path(@yarn) %>
