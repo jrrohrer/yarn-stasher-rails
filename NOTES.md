@@ -189,6 +189,9 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
             - '/projects/:id/comments/:id (view an individual comment)
             - '/projects/:id/comments/edit (edit an existing comment)
 
+5/25
+- 
+
 REFACTORING THOUGHTS
 
   - new/edit forms should be made into partials for yarns & projects

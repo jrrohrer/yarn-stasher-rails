@@ -1,13 +1,16 @@
 class CommentsController < ApplicationController
+  def index
+    @project = Project.find_by_id(params[:project_id])
+  end
+
   def new
     @project = Project.find_by_id(params[:project_id])
     @comment = @project.comments.build
-
-    # comment belongs to a project
   end
 
   def create
-    @comment = Comment.new(comment_params)
+    @comment = current_user.comments.build(comment_params)
+    # this line creates a new comment linked to a user without adding a 2nd line of code to do so separately. 
     if @comment.save
       redirect_to comment_path(@comment)
     else
@@ -17,7 +20,7 @@ class CommentsController < ApplicationController
   end
 
   def show
-
+    @comment = Comment.find_by(id: params[:id])
   end
 
   def edit

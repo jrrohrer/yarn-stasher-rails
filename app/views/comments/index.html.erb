@@ -1,0 +1,9 @@
+<h1>Comments on <%= @project.title %></h1>
+
+<% @project.comments.each do |comment| %>
+<div class="comment_container">
+  <strong><%= comment.user.username %></strong>
+  <p><%= comment.content %></p>
+  <p><%= comment.created_at.strftime("Left on %-m/%-d/%Y") %></p>
+</div>
+<% end %>
