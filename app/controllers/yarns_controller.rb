@@ -6,8 +6,10 @@ class YarnsController < ApplicationController
   end
 
   def create
-    @yarn = Yarn.new(yarn_params)
-    @yarn.user_id = session[:user_id] #yarn being created should automatically belong to the user creating it
+    @yarn = current_user.yarns.build(yarn_params)
+    # this line creates a yarn linked to the user creating it. Replaces these lines and does the same thing:
+    # @yarn = Yarn.new(yarn_params)
+    # @yarn.user_id = session[:user_id] 
     @yarn.save
     if @yarn.save
       redirect_to yarn_path(@yarn)
@@ -17,11 +19,11 @@ class YarnsController < ApplicationController
   end
 
   def show
-    @yarn = Yarn.find_by(id: params[:id])
+    set_yarn
   end
 
   def edit
-    @yarn = Yarn.find_by(id: params[:id])
+    set_yarn
   end
 
   def update
@@ -52,5 +54,9 @@ class YarnsController < ApplicationController
        # :tool_size
       #]
     )
+  end
+
+  def set_yarn
+    @yarn = Yarn.find_by(id: params[:id])
   end
 end
