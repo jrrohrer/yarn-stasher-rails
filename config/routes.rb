@@ -9,10 +9,9 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   
 
-  resources :comments
+  resources :comments, only: [:edit, :update, :destroy]
   resources :projects do 
-    resources :comments, shallow: true
-    # gives me shallow routing for the nested comments resource: index, new, and edit only. 
+    resources :comments, only: [:index, :new, :create, :show]
   end
   resources :yarns
   resources :users
