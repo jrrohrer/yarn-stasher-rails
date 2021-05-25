@@ -1,4 +1,6 @@
 <h1>Posted Comment:</h1>
 
 <%= @comment.content %>
-
+<br>
+<%= link_to 'Edit this Comment', edit_comment_path(@comment) %>
+<%= link_to 'Back to Project Page', project_path(@comment.project) %>

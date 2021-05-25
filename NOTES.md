@@ -190,7 +190,9 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
             - '/projects/:id/comments/edit (edit an existing comment)
 
 5/25
-- 
+- sorted out comments#create controller action
+- comments#show controller action and view
+- comments#index controller action and view (shows all comments for a particular project...might not keep this. I kind of want all the comments for a project to show up on the project show page)
 
 REFACTORING THOUGHTS
 

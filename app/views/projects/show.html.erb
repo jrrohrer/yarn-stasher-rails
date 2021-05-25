@@ -1,19 +1,38 @@
-<h1><%= @project.title %></h1>
-<p>Pattern Name: <%= @project.pattern_name %></p>
-<p>Designer: <%= @project.designer %></p>
-<p>Craft: <%= @project.craft %></p>
-<p>Tool Size: <%= @project.tool_size %></p>
+<div class='project-info'>
+  <h1><%= @project.title %></h1>
+  <br>
+  <%= link_to 'Edit This Project', edit_project_path(@project) %> |
+  <%= link_to 'Leave a Comment', new_project_comment_path(@project.id) %>
+  <br>
+  <p>Pattern Name: <%= @project.pattern_name %></p>
+  <p>Designer: <%= @project.designer %></p>
+  <p>Craft: <%= @project.craft %></p>
+  <p>Tool Size: <%= @project.tool_size %></p>
+</div>
 
-<h2>Yarns Used:</h2>
-<% if @project.yarns %>
-  <% @project.yarns.each do |yarn| %>
-    <p>Brand Name: <%= yarn.brand_name %></p>
-    <p>Colorway: <%= yarn.colorway %></p>
-    <p>Fiber: <%= yarn.fiber %></p>
-    <p>Weight: <%= yarn.weight %></p>
-    <p>Yardage: <%= yarn.yardage %></p>
-    <p>Quantity: <%= yarn.quantity %></p>
+<div class='yarns-info'>
+  <h2>Yarns Used:</h2>
+  <% if @project.yarns %>
+    <% @project.yarns.each do |yarn| %>
+      <p>Brand Name: <%= yarn.brand_name %></p>
+      <p>Colorway: <%= yarn.colorway %></p>
+      <p>Fiber: <%= yarn.fiber %></p>
+      <p>Weight: <%= yarn.weight %></p>
+      <p>Yardage: <%= yarn.yardage %></p>
+      <p>Quantity: <%= yarn.quantity %></p>
+    <% end %>
   <% end %>
-<% end %>
+</div>
 
-<%= link_to 'Edit This Project', edit_project_path(@project) %>
+<div class='comments-section'>
+  <h2>All Comments</h2>
+
+  <% @project.comments.each do |comment| %>
+  <div class="comment_container">
+    <strong><%= comment.user.username %></strong>
+    <p><%= comment.content %></p>
+    <p><%= comment.created_at.strftime("Left on %-m/%-d/%Y") %></p>
+    <%= link_to 'View Comment', project_comment_path(@project, comment.id) %>
+  </div>
+  <% end %>
+</div>
