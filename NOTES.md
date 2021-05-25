@@ -193,6 +193,17 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
 - sorted out comments#create controller action
 - comments#show controller action and view
 - comments#index controller action and view (shows all comments for a particular project...might not keep this. I kind of want all the comments for a project to show up on the project show page)
+- added a link to projects#show page to view individual comments
+  - thinking of adding a feature where only part of a long comment is visible on the project#show page
+  - also only showing the 5 latest comments, then linking to comments#index if someone wants to see all of the comments on a project.
+
+Next time:
+  - add form for editing a comment (plus accompanying infrastructure)
+  - add flash error messages 
+  - begin adding delete functionality (users should be able to delete yarns, projects, and comments)
+    - what happens to comments if a project is deleted?
+  - Users#show should be the user's profile page?
+  - Users#index should list all of the user's yarns/projects/comments?
 
 REFACTORING THOUGHTS
 

@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   def index
+    # the only time this will get accessed is if someone views all comments for a project.
     @project = Project.find_by_id(params[:project_id])
   end
 

@@ -5,5 +5,6 @@
   <strong><%= comment.user.username %></strong>
   <p><%= comment.content %></p>
   <p><%= comment.created_at.strftime("Left on %-m/%-d/%Y") %></p>
+  <%= link_to 'View Comment', project_comment_path(@project, comment.id) %>
 </div>
 <% end %>

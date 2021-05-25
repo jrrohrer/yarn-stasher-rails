@@ -12,9 +12,16 @@
 
   <body>
     <nav>
-        <%= link_to 'Log In', login_path %> | 
-        <%= link_to 'Sign Up', signup_path %> |
+      <% if logged_in %>
+        <%= link_to 'Home', user_path(current_user) %>
+        <%= link_to 'New Yarn', new_yarn_path %>
+        <%= link_to 'New Project', new_project_path %>
+        <%= link_to 'All Projects', projects_path %>
         <%= link_to 'Log Out', logout_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Log In', login_path %> | 
+        <%= link_to 'Sign Up', signup_path %>
+      <% end %>
     </nav>
 
     <%= yield %>
