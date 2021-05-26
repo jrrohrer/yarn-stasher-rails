@@ -32,7 +32,7 @@ class ProjectsController < ApplicationController
     redirect_to project_path(project)
   end
 
-   def destroy
+  def destroy
     project = Project.find_by(id: params[:id])
     project.destroy
    
