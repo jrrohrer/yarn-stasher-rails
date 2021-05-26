@@ -197,8 +197,12 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
   - thinking of adding a feature where only part of a long comment is visible on the project#show page
   - also only showing the 5 latest comments, then linking to comments#index if someone wants to see all of the comments on a project.
 
+5/26
+  - added form and controller actions for editing a comment
+  - added delete controller action & view link for comments
+
 Next time:
-  - add form for editing a comment (plus accompanying infrastructure)
+
   - add flash error messages 
   - begin adding delete functionality (users should be able to delete yarns, projects, and comments)
     - what happens to comments if a project is deleted?
