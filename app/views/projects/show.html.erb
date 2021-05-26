@@ -1,7 +1,8 @@
 <div class='project-info'>
   <h1><%= @project.title %></h1>
   <br>
-  <%= link_to 'Edit This Project', edit_project_path(@project) %> |
+  <%= link_to 'Edit This Project', edit_project_path(@project) %> | 
+  <%= link_to 'Delete This Project', project_path(@project), method: :delete %> |
   <%= link_to 'Leave a Comment', new_project_comment_path(@project.id) %>
   <br>
   <p>Pattern Name: <%= @project.pattern_name %></p>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_18_212142) do
+ActiveRecord::Schema.define(version: 2021_05_26_153441) do
 
   create_table "comments", force: :cascade do |t|
     t.string "content"
@@ -60,6 +60,5 @@ ActiveRecord::Schema.define(version: 2021_05_18_212142) do
   add_foreign_key "comments", "projects"
   add_foreign_key "comments", "users"
   add_foreign_key "projects", "users"
-  add_foreign_key "yarns", "projects"
   add_foreign_key "yarns", "users"
 end
