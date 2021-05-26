@@ -23,6 +23,7 @@ class YarnsController < ApplicationController
   end
 
   def edit
+    # add protection so only user who owns yarn can edit it
     set_yarn
   end
 
@@ -31,6 +32,13 @@ class YarnsController < ApplicationController
     yarn = Yarn.find_by(id: params[:id])
     yarn.update(yarn_params)
     redirect_to yarn_path(yarn)
+  end
+
+  def destroy
+    # add protection so only user who owns yarn can delete it
+    yarn = Yarn.find_by(id: params[:id])
+    yarn.destroy
+    redirect_to user_path(current_user)
   end
 
 

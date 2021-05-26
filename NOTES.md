@@ -200,6 +200,8 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
 5/26
   - added form and controller actions for editing a comment
   - added delete controller action & view link for comments
+  - added delete controller action & view link for projects
+  - added delete controller action & view link for yarns
 
 Next time:
 

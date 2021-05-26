@@ -11,4 +11,4 @@
   <p>Associated Project: <%= @yarn.project.title %></p>
 <% end  %>
 
-<%= link_to 'Edit This Yarn', edit_yarn_path(@yarn) %>
+<%= link_to 'Edit This Yarn', edit_yarn_path(@yarn) %> | <%= link_to 'Delete This Yarn', yarn_path(@yarn), method: :delete %>
