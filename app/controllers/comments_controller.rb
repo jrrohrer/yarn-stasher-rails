@@ -25,11 +25,22 @@ class CommentsController < ApplicationController
   end
 
   def edit
-
+    @comment = Comment.find_by_id(params[:id])
   end
 
   def update
+    # add protection so only user who owns comment can edit it
+    comment = Comment.find_by(id: params[:id])
+    comment.update(comment_params)
+    redirect_to project_comment_path(comment.project_id, comment.id)
+  end
 
+  def destroy
+    comment = Comment.find_by(id: params[:id])
+    project = comment.project_id
+    comment.destroy
+
+    redirect_to project_path(project)
   end
 
   private
