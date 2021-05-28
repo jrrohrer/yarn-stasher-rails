@@ -11,7 +11,7 @@ class YarnsController < ApplicationController
     if @yarn.project
       @yarn.project.user_id = session[:user_id]
     end
-    # is there a better way to do this???? using build method to associate the yarn to a user broke things, and then i didn't know how to get the yarn's user_id into the attributes for the project...
+    # is there a better way to do this???? using build method to associate the yarn to a user broke things, and i didn't know how to get the yarn's user_id into the attributes for the project...
     @yarn.save
     if @yarn.save
       redirect_to yarn_path(@yarn)
