@@ -1,5 +1,7 @@
 <h1>Edit Project</h1>
 
+<%= render partial: 'layouts/errors', locals: {object: @project} %>
+
 <%= form_for(@project) do |f| %>
   <%= f.label :title %><br>
   <%= f.text_field :title %><br>

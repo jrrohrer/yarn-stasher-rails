@@ -1,5 +1,7 @@
 <h1>Edit Yarn</h1>
 
+<%= render partial: 'layouts/errors', locals: {object: @yarn} %>
+
 <%= form_for(@yarn) do |f| %>
   <%= f.label :brand_name %><br>
   <%= f.text_field :brand_name %><br>

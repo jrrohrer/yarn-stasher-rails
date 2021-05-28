@@ -14,7 +14,7 @@ class YarnsController < ApplicationController
     if @yarn.save
       redirect_to yarn_path(@yarn)
     else
-      redirect_to new_yarn_path
+      render :new
     end
   end
 

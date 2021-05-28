@@ -1,5 +1,7 @@
 <h1>New Comment for <%= @comment.project.title %></h1>
 
+<%= render partial: 'layouts/errors', locals: {object: @comment} %>
+
 <%= form_for(@comment) do |f| %>
   <%= f.label :content %><br>
   <%= f.text_area :content %><br>

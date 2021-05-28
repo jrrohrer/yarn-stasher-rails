@@ -3,4 +3,6 @@ class Project < ApplicationRecord
   has_many :yarns
   has_many :comments, dependent: :destroy
   has_many :users, through: :comments
+
+  validates :title, presence: true
 end
