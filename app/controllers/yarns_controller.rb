@@ -6,10 +6,9 @@ class YarnsController < ApplicationController
   end
 
   def create
-    @yarn = current_user.yarns.build(yarn_params)
-    # this line creates a yarn linked to the user creating it. Replaces these lines and does the same thing:
-    # @yarn = Yarn.new(yarn_params)
-    # @yarn.user_id = session[:user_id] 
+    @yarn = Yarn.new(yarn_params)
+    @yarn.user_id = session[:user_id] 
+    @yarn.project.user_id = session[:user_id]
     @yarn.save
     if @yarn.save
       redirect_to yarn_path(@yarn)
@@ -53,14 +52,8 @@ class YarnsController < ApplicationController
       :yardage, 
       :quantity,
       :user_id,
-      :project_id
-      #project_attributes: [
-       # :title,
-       # :pattern_name,
-       # :designer,
-       # :craft,
-       # :tool_size
-      #]
+      :project_id, 
+      project_attributes: [:title, :pattern_name, :designer, :craft, :tool_size]
     )
   end
 

@@ -203,18 +203,20 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
   - added delete controller action & view link for projects (if a project is deleted, all associated comments are also removed from the DB)
   - added delete controller action & view link for yarns
 
+5/28
+  - added an error partial to render in the new/edit views for all classes 
+
 Next time:
-  - add flash error messages 
   - Users#show should be the user's profile page?
   - Users#index should list all of the user's yarns/projects/comments?
   - scope methods: 
       -most popular project (project with the most comments)
       -most active user (user with the most projects or user with the most comments)
       -post-login landing page with scope method data? show current most popular project & user w/most comments?
-
+  - validations: before actions etc so that only people who own a thing can change it
 
 REFACTORING THOUGHTS
-
+  - check validations
   - new/edit forms should be made into partials for yarns & projects
   - 'set_object' methods in controllers
 

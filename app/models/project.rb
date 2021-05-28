@@ -5,4 +5,8 @@ class Project < ApplicationRecord
   has_many :users, through: :comments
 
   validates :title, presence: true
+
+  def brand_and_colorway
+    "#{brand_name} - #{colorway}"
+  end
 end

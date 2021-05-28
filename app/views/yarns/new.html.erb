@@ -22,10 +22,10 @@
   <%= f.text_field :quantity %><br>
 
   <p>Select an Existing Project</p>
-  <%= f.collection_select :project_id, Project.all, :id, :title, {include_blank: true} %> <br>
+  <%= f.collection_select :project_id, current_user.projects, :id, :title, {include_blank: true} %> <br>
 
-  <!-- <p>Or Create a new Project</p>
-    <%= f.fields_for :project do |p| %>
+  <p>Or Create a new Project</p>
+    <%= f.fields_for :project, Project.new do |p| %>
       <%= p.label :title %><br>
       <%= p.text_field :title %><br>
 
@@ -41,7 +41,7 @@
       <%= p.label :tool_size %><br>
       <%= p.text_field :tool_size %><br>
 
-    <% end %> -->
+    <% end %>
 
   <%= f.submit "Create New Yarn" %>
 <% end %>
