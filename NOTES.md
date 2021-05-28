@@ -184,27 +184,31 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
         - or I could just link back to the individual yarn show pages? Or just display this data on the project's show page?
       - nest comments under projects?
         - would give me routes for commenting, since comments can't exist without being owned by both a project and a user:
-            - '/projects/:id/comments (all comments for a project)
-            - '/projects/:id/comments/new (create a new comment for a project)
-            - '/projects/:id/comments/:id (view an individual comment)
-            - '/projects/:id/comments/edit (edit an existing comment)
+          - '/projects/:id/comments (all comments for a project)
+          - '/projects/:id/comments/new (create a new comment for a project)
+          - '/projects/:id/comments/:id (view an individual comment)
+          - '/projects/:id/comments/edit (edit an existing comment)
 
-5/25
-- sorted out comments#create controller action
-- comments#show controller action and view
-- comments#index controller action and view (shows all comments for a particular project...might not keep this. I kind of want all the comments for a project to show up on the project show page)
-- added a link to projects#show page to view individual comments
-  - thinking of adding a feature where only part of a long comment is visible on the project#show page
-  - also only showing the 5 latest comments, then linking to comments#index if someone wants to see all of the comments on a project.
+  5/25
+    - sorted out comments#create controller action
+    - comments#show controller action and view
+    - comments#index controller action and view (shows all comments for a particular project...might not keep this. I kind of want all the comments for a project to show up on the project show page)
+    - added a link to projects#show page to view individual comments
+    - thinking of adding a feature where only part of a long comment is visible on the project#show page
+    - also only showing the 5 latest comments, then linking to comments#index if someone wants to see all of the comments on a project.
 
-5/26
-  - added form and controller actions for editing a comment
-  - added delete controller action & view link for comments
-  - added delete controller action & view link for projects (if a project is deleted, all associated comments are also removed from the DB)
-  - added delete controller action & view link for yarns
+  5/26
+    - added form and controller actions for editing a comment
+    - added delete controller action & view link for comments
+    - added delete controller action & view link for projects (if a project is deleted, all associated comments are also removed from the DB)
+    - added delete controller action & view link for yarns
 
-5/28
-  - added an error partial to render in the new/edit views for all classes 
+  5/28
+    - added an error partial to render in the new/edit views for all classes 
+    - updated new yarn form to also create a new project
+    - made the creation of a project when making a new yarn optional
+    - added the option to associate an existing yarn to an existion project in the yarn edit form
+
 
 Next time:
   - Users#show should be the user's profile page?
@@ -214,6 +218,7 @@ Next time:
       -most active user (user with the most projects or user with the most comments)
       -post-login landing page with scope method data? show current most popular project & user w/most comments?
   - validations: before actions etc so that only people who own a thing can change it
+  - add nested forms so a user can optionally create a yarn when creating a project and vice versa
 
 REFACTORING THOUGHTS
   - check validations

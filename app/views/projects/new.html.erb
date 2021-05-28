@@ -19,8 +19,5 @@
   <%= f.label :tool_size %><br>
   <%= f.text_field :tool_size %><br>
 
-  <p>Add an Existing Yarn:</p>
-  <%= f.collection_select :yarn_ids, current_user.yarns, :id, :brand_and_colorway, {include_blank: true} %> <br>
-
   <%= f.submit 'Start Project' %>
 <% end %>
