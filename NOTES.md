@@ -209,6 +209,12 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - made the creation of a project when making a new yarn optional
     - added the option to associate an existing yarn to an existion project in the yarn edit form
 
+  6/1
+    - converted Users#show into the user's profile page (also where new users will land after creating their account)
+    - created Users#index as a home page post-login
+      - This is where info from scope methods will be displayed
+    
+
 
 Next time:
   - Users#show should be the user's profile page?
@@ -218,7 +224,6 @@ Next time:
       -most active user (user with the most projects or user with the most comments)
       -post-login landing page with scope method data? show current most popular project & user w/most comments?
   - validations: before actions etc so that only people who own a thing can change it
-  - add nested forms so a user can optionally create a yarn when creating a project and vice versa
 
 REFACTORING THOUGHTS
   - check validations

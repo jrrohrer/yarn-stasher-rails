@@ -13,7 +13,8 @@
   <body>
     <nav>
       <% if logged_in %>
-        <%= link_to 'Home', user_path(current_user) %>
+        <%= link_to 'Home', users_path %>
+        <%= link_to 'My Profile', user_path(current_user) %>
         <%= link_to 'New Yarn', new_yarn_path %>
         <%= link_to 'New Project', new_project_path %>
         <%= link_to 'All Projects', projects_path %>
