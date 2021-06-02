@@ -7,7 +7,7 @@ class Project < ApplicationRecord
   validates :title, presence: true
 
   # finds the project with the highest humber of comments
-  scope :popular_project, -> { joins(:comments).group(:project_id).order('COUNT(comments.id) DESC').limit(1) }
+  scope :popular_project, -> { joins(:comments).group(:project_id).order('COUNT(comments.id) DESC').first }
   # joins projects table to comments table, groups comments by project ID, counts the comments for each project ID and puts them in descending order, then returns only the first one (the one with the highest number of comments)
 
   # finds the 5 most recent projects

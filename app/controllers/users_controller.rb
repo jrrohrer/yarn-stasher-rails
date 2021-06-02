@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def index
+    @project = Project.popular_project
+    @new_projects = Project.recent_projects
+  end
 
   def new
     @user = User.new
