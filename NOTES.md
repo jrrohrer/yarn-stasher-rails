@@ -213,17 +213,21 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - converted Users#show into the user's profile page (also where new users will land after creating their account)
     - created Users#index as a home page post-login
       - This is where info from scope methods will be displayed
+    - added scope method for finding the project with the most comments
+    - created scope method for finding the project with the most comments
     
 
 
 Next time:
-  - Users#show should be the user's profile page?
-  - Users#index should list all of the user's yarns/projects/comments?
   - scope methods: 
-      -most popular project (project with the most comments)
       -most active user (user with the most projects or user with the most comments)
-      -post-login landing page with scope method data? show current most popular project & user w/most comments?
   - validations: before actions etc so that only people who own a thing can change it
+  - OmniAuth with google? Or Facebook/Insta? Ravelry has OAuth now?
+  - What do I want to see on a user's profile page? 
+    - Username
+    - Profile picture?
+    - List of the projects they own w/ links to project show pages (displayed as cards?)
+    - Table containing the user's yarn stash
 
 REFACTORING THOUGHTS
   - check validations
