@@ -7,4 +7,7 @@ class Yarn < ApplicationRecord
 
   validates :brand_name, :quantity, presence: true
 
+  # scope method for finding the most popular yarn brand
+  scope :popular_yarn, -> { group(:brand_name).select(:brand_name).order("count(id) desc").limit(1) }
+  # group yarns by brand name, select brand name, order by brands that have the most yarn_ids, return the first object's brand name
 end

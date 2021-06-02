@@ -215,12 +215,14 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
       - This is where info from scope methods will be displayed
     - added scope method for finding the project with the most comments
     - created scope method for finding the project with the most comments
-    
+  
+  6/2
+    - displayed data returned from Project scope methods on users#index page
+    - created scope method for finding the user with the most comments
+    - displayed data returned from User scope method on users#index page
 
 
 Next time:
-  - scope methods: 
-      -most active user (user with the most projects or user with the most comments)
   - validations: before actions etc so that only people who own a thing can change it
   - OmniAuth with google? Or Facebook/Insta? Ravelry has OAuth now?
   - What do I want to see on a user's profile page? 

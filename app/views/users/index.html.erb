@@ -6,15 +6,23 @@
   <p><%= @project.user.username %></p>
 </div>
 
+<div class="top-brand">
+  <h2>Most Popular Yarn Brand</h2>
+  <h3><%= @popular_yarn.brand_name %></h3>
+</div>
+
 <div class="top-commenter">
   <h2>Top Commenter</h2>
+  <h3><%= @top_commenter.username %></h3>
+  <p>Total Comments: <%= @top_commenter.comments.count %></p>
+
 </div>
 
 <div class="new-projects">
   <h2>Recently Created Projects</h2>
   <% @new_projects.each do |project| %>
     <div class="project-card">
-      <h3><%= project.title %></h3>
+      <h3><%= link_to project.title, project_path(project) %></h3>
       <p><%= project.user.username %></p>
     </div>
   <% end %>

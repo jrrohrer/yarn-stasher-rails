@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   def index
-    @project = Project.popular_project
+    @project = Project.popular_project.first
     @new_projects = Project.recent_projects
+    @top_commenter = User.top_commenter.first
+    @popular_yarn = Yarn.popular_yarn.first
   end
 
   def new
