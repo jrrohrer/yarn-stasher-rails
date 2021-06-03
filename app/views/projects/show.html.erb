@@ -34,7 +34,7 @@
 <div class='comments-section'>
   <h2>Comments</h2>
   
-  <%= link_to 'Leave a Comment', new_project_comment_path(@project.id) %>
+  <%= link_to 'Leave a Comment', new_project_comment_path(@project.id) %> | <%= link_to 'View All Comments', project_comments_path(@project) %>
   <br>
   <% @project.comments.each do |comment| %>
   <div class="comment_container">
