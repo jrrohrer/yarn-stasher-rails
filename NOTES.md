@@ -223,11 +223,11 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - created scope method for finding the most popular yarn brand
     - displayed data returned from Yarn scope method on users#index page
     - renamed the users#index route so that the url displays as '/home' rather than '/users'
+    - added google oauth login! (what a pain -_-' )
 
 
 Next time:
   - validations: before actions etc so that only people who own a thing can change it
-  - OmniAuth with google? Or Facebook/Insta? Ravelry has OAuth now?
   - What do I want to see on a user's profile page? 
     - Username
     - Profile picture?
