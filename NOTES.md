@@ -224,10 +224,24 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - displayed data returned from Yarn scope method on users#index page
     - renamed the users#index route so that the url displays as '/home' rather than '/users'
     - added google oauth login! (what a pain -_-' )
+  
+  6/3 
+    - added before action to require that users are logged in to view any page other than home, login, or signup
+    - refactored users#show so that all data is collected through the user model. Now all the info on the page belongs to the user whose id is in the URL, rather than whoever the current user is. This way, users can view other users' profile pages
+    - added protections so only the user who created a yarn can edit or delete it.
+    - added protections so only the user who created a project can edit or delete it.
+    - minor view refactoring for clarity
+    - added links to user profiles in the project views
+    
 
 
 Next time:
-  - validations: before actions etc so that only people who own a thing can change it
+  - validations:
+    - before action to require users be logged in to see anything other than home, login, and signup pages
+    - ensure only users who own a project/yarn can edit or delete them
+
+
+
   - What do I want to see on a user's profile page? 
     - Username
     - Profile picture?
