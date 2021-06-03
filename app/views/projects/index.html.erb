@@ -2,5 +2,5 @@
 
 <% @projects.each do |project| %>
   <h2><%= link_to project.title, project_path(project) %></h2>
-  <p>Crafter: <%= project.user.username %><p>
+  <p>Crafter: <%= link_to project.user.username,  user_path(project.user_id) %><p>
 <% end %>

@@ -1,10 +1,16 @@
+<br>
+<div class='error'>
+  <%= flash[:error] if flash[:error] %>
+</div>
+<br>
+<% if @project.user == current_user %>
+<%= link_to 'Edit This Project', edit_project_path(@project) %> | 
+<%= link_to 'Delete This Project', project_path(@project), method: :delete %>
+<% end %>
+
 <div class='project-info'>
   <h1><%= @project.title %></h1>
-  <br>
-  <%= link_to 'Edit This Project', edit_project_path(@project) %> | 
-  <%= link_to 'Delete This Project', project_path(@project), method: :delete %> |
-  <%= link_to 'Leave a Comment', new_project_comment_path(@project.id) %>
-  <br>
+  <p>Crafter: <%= link_to @project.user.username,  user_path(@project.user_id) %></p>
   <p>Pattern Name: <%= @project.pattern_name %></p>
   <p>Designer: <%= @project.designer %></p>
   <p>Craft: <%= @project.craft %></p>
@@ -26,11 +32,13 @@
 </div>
 
 <div class='comments-section'>
-  <h2>All Comments</h2>
-
+  <h2>Comments</h2>
+  
+  <%= link_to 'Leave a Comment', new_project_comment_path(@project.id) %>
+  <br>
   <% @project.comments.each do |comment| %>
   <div class="comment_container">
-    <strong><%= comment.user.username %></strong>
+    <h3><%= link_to comment.user.username, user_path(comment.user_id) %>: </h3>
     <p><%= comment.content %></p>
     <p><%= comment.created_at.strftime("Left on %-m/%-d/%Y") %></p>
     <%= link_to 'View Comment', project_comment_path(@project, comment.id) %>

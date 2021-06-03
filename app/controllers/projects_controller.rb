@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_action :require_permission, only: [:edit, :update, :destroy]
+
   def index
     @projects = Project.all
   end
@@ -43,5 +45,13 @@ class ProjectsController < ApplicationController
 
   def project_params
     params.require(:project).permit(:title, :pattern_name, :designer, :craft, :tool_size, :user_id)
+  end
+
+  def require_permission
+    project = Project.find_by(id: params[:id])
+    if project.user_id != current_user
+      flash[:error] = 'Only the user who created a project may edit or delete it.'
+      redirect_to project_path(project)
+    end
   end
 end
