@@ -24,12 +24,12 @@
         <%= link_to 'Sign Up', signup_path %>
       <% end %>
     </nav>
+    <div class='wrapper'>
+      <%= yield %>
+    </div>
 
-    <%= yield %>
-
-    <footer>
-      <p>Yarn Stasher</p>
-      <p>&copy; Jessie Rohrer, 2021</p>
+    <footer class="branding">
+      <small>&copy; 2021 <strong>Yarn Stasher</strong></small>
     </footer>
   </body>
 </html>
