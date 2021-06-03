@@ -231,26 +231,23 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - added protections so only the user who created a yarn can edit or delete it.
     - added protections so only the user who created a project can edit or delete it.
     - minor view refactoring for clarity
-    - added links to user profiles in the project views
+    - added links to user profiles in the project views & comments section
     
 
 
 Next time:
   - validations:
-    - before action to require users be logged in to see anything other than home, login, and signup pages
-    - ensure only users who own a project/yarn can edit or delete them
-
-
-
+    
   - What do I want to see on a user's profile page? 
-    - Username
-    - Profile picture?
-    - List of the projects they own w/ links to project show pages (displayed as cards?)
-    - Table containing the user's yarn stash
+    [x] Username
+    [ ] Profile picture?
+    [x] List of the projects they own w/ links to project show pages (displayed as cards?)
+    [x] Table containing the user's yarn stash
+
   - add pictures?
+  - styling!
 
 REFACTORING THOUGHTS
-  - check validations
-  - new/edit forms should be made into partials for yarns & projects
+  - new/edit forms should be made into partials for yarns, projects, and comments
   - 'set_object' methods in controllers
 
