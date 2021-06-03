@@ -12,4 +12,5 @@ class User < ApplicationRecord
   # scope method for finding the user who has made the most comments
   scope :top_commenter, -> { joins(:comments).group(:user_id).order('COUNT(comments.id) DESC').limit(1) }
   # joins users table to comments table, groups comments by user ID, counts the comments made by each user and puts them in descending order, then returns only the first one (the one with the highest number of comments)
+
 end

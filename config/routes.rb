@@ -8,8 +8,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
-  get 'home', to: 'users#index', as: :users
-  
+  get '/auth/google_oauth2/callback', to: 'sessions#omniauth'
 
   resources :comments
   resources :projects do 
@@ -17,5 +16,4 @@ Rails.application.routes.draw do
   end
   resources :yarns
   resources :users
-
 end

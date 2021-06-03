@@ -220,6 +220,9 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - displayed data returned from Project scope methods on users#index page
     - created scope method for finding the user with the most comments
     - displayed data returned from User scope method on users#index page
+    - created scope method for finding the most popular yarn brand
+    - displayed data returned from Yarn scope method on users#index page
+    - renamed the users#index route so that the url displays as '/home' rather than '/users'
 
 
 Next time:
@@ -230,6 +233,7 @@ Next time:
     - Profile picture?
     - List of the projects they own w/ links to project show pages (displayed as cards?)
     - Table containing the user's yarn stash
+  - add pictures?
 
 REFACTORING THOUGHTS
   - check validations
