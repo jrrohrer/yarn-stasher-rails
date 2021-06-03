@@ -232,6 +232,8 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - added protections so only the user who created a project can edit or delete it.
     - minor view refactoring for clarity
     - added links to user profiles in the project views & comments section
+    - added some basic styling (pulled from previous iteration of this project)
+    - displayed user's projects as info cards on their profile page
     
 
 
