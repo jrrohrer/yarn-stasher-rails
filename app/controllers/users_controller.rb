@@ -22,8 +22,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    # set the user, then use the has_many relationship to show that user's yarns and projects in the view. That way it doesn't matter what user is logged in, the username, yarns, and projects in the view will always match the ID in the URL. 
     @user = User.find_by(id: params[:id])
-    @yarns = Yarn.all.select {|yarn| yarn.user_id == session[:user_id]} 
   end
 
   private

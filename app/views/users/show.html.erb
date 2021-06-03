@@ -1,6 +1,8 @@
-<h1><%= @user.username %>'s Profile</h1>
+<h1><%= @user.username %>'s Stash</h1>
 
 <%= link_to 'Add New Yarn', new_yarn_path %> | <%= link_to 'Add New Project', new_project_path %>
+
+<h2>My Yarns</h2>
 
 <table>
     <thead>
@@ -13,7 +15,7 @@
             <th>Quantity</a></th>
         </tr>
     </thead>
-    <% @yarns.each do |yarn|%>
+    <% @user.yarns.each do |yarn|%>
         <tr>
             <td><%= link_to yarn.brand_name, yarn_path(yarn) %></td>
             <td><%= yarn.colorway %></td>
@@ -25,3 +27,14 @@
         </tr>
     <% end %>
 </table>
+
+<h2>My Projects</h2>
+<% @user.projects.each do |project| %>
+<div class="project-card">
+    <h3><%= project.title %></h3>
+    <p>Pattern: <%= project.pattern_name %></p>
+    <p>Designer: <%= project.designer %></p>
+    <p>Craft: <%= project.craft %></p>
+    <p>Tool Size: <%= project.tool_size %></p>
+</div>
+<% end %>
