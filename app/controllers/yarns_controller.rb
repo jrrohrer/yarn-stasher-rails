@@ -1,4 +1,5 @@
 class YarnsController < ApplicationController
+  before_action :require_permission, only:[:edit, :update, :destroy]
 
   def new
     @yarn = Yarn.new
@@ -25,19 +26,16 @@ class YarnsController < ApplicationController
   end
 
   def edit
-    # add protection so only user who owns yarn can edit it
     set_yarn
   end
 
   def update
-    # add protection so only user who owns yarn can edit it
     yarn = Yarn.find_by(id: params[:id])
     yarn.update(yarn_params)
     redirect_to yarn_path(yarn)
   end
 
   def destroy
-    # add protection so only user who owns yarn can delete it
     yarn = Yarn.find_by(id: params[:id])
     yarn.destroy
     redirect_to user_path(current_user)
@@ -62,5 +60,13 @@ class YarnsController < ApplicationController
 
   def set_yarn
     @yarn = Yarn.find_by(id: params[:id])
+  end
+
+  def require_permission
+    yarn = Yarn.find_by(id: params[:id])
+    if yarn.user_id != current_user
+      flash[:error] = 'Only the user who created a yarn may edit or delete it.'
+      redirect_to yarn_path(yarn)
+    end
   end
 end

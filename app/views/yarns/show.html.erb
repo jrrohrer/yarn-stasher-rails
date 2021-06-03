@@ -1,5 +1,8 @@
-<h1>Yarn Details</h1>
+<div class='error'>
+  <%= flash[:error] if flash[:error] %>
+</div>
 
+<h1>Yarn Details</h1>
 
 <p>Brand Name: <%= @yarn.brand_name %></p>
 <p>Colorway: <%= @yarn.colorway %></p>
@@ -11,4 +14,6 @@
   <p>Associated Project: <%= @yarn.project.title %></p>
 <% end  %>
 
-<%= link_to 'Edit This Yarn', edit_yarn_path(@yarn) %> | <%= link_to 'Delete This Yarn', yarn_path(@yarn), method: :delete %>
+<% if @yarn.user_id == current_user %>
+  <%= link_to 'Edit This Yarn', edit_yarn_path(@yarn) %> | <%= link_to 'Delete This Yarn', yarn_path(@yarn), method: :delete %>
+<% end %>
