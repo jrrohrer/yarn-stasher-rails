@@ -49,7 +49,7 @@ class ProjectsController < ApplicationController
 
   def require_permission
     project = Project.find_by(id: params[:id])
-    if project.user_id != current_user
+    if project.user_id != current_user.id
       flash[:error] = 'Only the user who created a project may edit or delete it.'
       redirect_to project_path(project)
     end

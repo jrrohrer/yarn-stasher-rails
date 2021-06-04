@@ -252,6 +252,10 @@ Next time:
     [x] Table containing the user's yarn stash
 
   - styling!
+    - edit/update links to buttons
+    - submit buttons
+    - sign in with google button on welcome page
+    - comments section of project show pages
 
 REFACTORING THOUGHTS
   - new/edit forms should be made into partials for yarns, projects, and comments

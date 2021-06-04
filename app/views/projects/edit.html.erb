@@ -3,20 +3,7 @@
 <%= render partial: 'layouts/errors', locals: {object: @project} %>
 
 <%= form_for(@project) do |f| %>
-  <%= f.label :title %><br>
-  <%= f.text_field :title %><br>
-
-  <%= f.label :pattern_name %><br>
-  <%= f.text_field :pattern_name %><br>
-
-  <%= f.label :designer %><br>
-  <%= f.text_field :designer %><br>
-
-  <%= f.label :craft %><br>
-  <%= f.text_field :craft %><br>
-
-  <%= f.label :tool_size %><br>
-  <%= f.text_field :tool_size %><br>
+  <%= render 'form', f: f %>
 
   <%= f.submit 'Update Project' %>
 <% end %>
