@@ -1,11 +1,11 @@
 class CommentsController < ApplicationController
   def index
     # the only time this will get accessed is if someone views all comments for a project.
-    @project = Project.find_by_id(params[:project_id])
+    set_project
   end
 
   def new
-    @project = Project.find_by_id(params[:project_id])
+    set_project
     @comment = @project.comments.build
   end
 
@@ -21,12 +21,12 @@ class CommentsController < ApplicationController
   end
 
   def show
-    @comment = Comment.find_by_id(params[:id])
+    set_comment
   end
 
   def edit
     # add protection so only user who owns comment can edit it 
-    @comment = Comment.find_by_id(params[:id])
+    set_comment
   end
 
   def update
@@ -50,5 +50,13 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:content, :project_id)
+  end
+
+  def set_project
+    @project = Project.find_by_id(params[:project_id])
+  end
+
+  def set_comment
+    @comment = Comment.find_by_id(params[:id])
   end
 end

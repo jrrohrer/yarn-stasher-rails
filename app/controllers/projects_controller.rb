@@ -21,11 +21,11 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find_by(id: params[:id])
+    set_project
   end
 
   def edit
-    @project = Project.find_by(id: params[:id])
+    set_project
   end
 
   def update
@@ -53,5 +53,9 @@ class ProjectsController < ApplicationController
       flash[:error] = 'Only the user who created a project may edit or delete it.'
       redirect_to project_path(project)
     end
+  end
+
+  def set_project
+    @project = Project.find_by(id: params[:id])
   end
 end

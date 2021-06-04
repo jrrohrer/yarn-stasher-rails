@@ -243,11 +243,9 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
 
 
 Next time:
-  - validations:
-    
   - What do I want to see on a user's profile page? 
     [x] Username
-    [x] Profile picture?
+    [x] Profile picture (if they set one when they created the account)
     [x] List of the projects they own w/ links to project show pages (displayed as cards?)
     [x] Table containing the user's yarn stash
 
@@ -255,5 +253,3 @@ Next time:
 
 REFACTORING THOUGHTS
   - new/edit forms should be made into partials for yarns, projects, and comments
-  - 'set_object' methods in controllers
-
