@@ -64,7 +64,7 @@ class YarnsController < ApplicationController
 
   def require_permission
     yarn = Yarn.find_by(id: params[:id])
-    if yarn.user_id != current_user
+    if yarn.user_id != current_user.id
       flash[:error] = 'Only the user who created a yarn may edit or delete it.'
       redirect_to yarn_path(yarn)
     end

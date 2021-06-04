@@ -239,6 +239,8 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - screen recording session
       - added profile photo to user model using Active Storage
     - refactoring session
+      - class methods in controllers for setting objects
+      - moving new/edit forms to partials
     
 
 
