@@ -1,8 +1,12 @@
 <h1><%= @user.username %>'s Stash</h1>
 
-<% if @user.image.attached? %>
-    <%= image_tag url_for(@user.image.variant(resize_to_fit: [300, 300])) %>
-<% end %>
+<div class="avatar">
+    <% if @user.image.attached? %>
+        <br>
+        <%= image_tag url_for(@user.image.variant(resize_to_fit: [200, 200])) %>
+        <br>
+    <% end %>
+</div>
 
 <%= link_to 'Add New Yarn', new_yarn_path %> | <%= link_to 'Add New Project', new_project_path %>
 

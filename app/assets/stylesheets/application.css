@@ -57,6 +57,7 @@ a:hover {
   max-width: 960px;
   padding: 2.25%; /* 18px / 800px */
   width: 90%;
+  text-align: center;
 }
 
 form {
