@@ -3,7 +3,7 @@
 <div class="avatar">
     <% if @user.image.attached? %>
         <br>
-        <%= image_tag url_for(@user.image.variant(resize_to_fit: [200, 200])) %>
+        <%= image_tag url_for(@user.image) %>
         <br>
     <% end %>
 </div>
@@ -48,3 +48,6 @@
         </div>
     <% end %>
 </div>
+
+
+    <%= link_to 'Update My Profile', edit_user_path(@user) %>

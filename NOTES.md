@@ -237,9 +237,8 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
   
   6/4 
     - screen recording session
-      - add profile photo to user model using Active Storage
-      - add ability to add photos to a project show page
-      - refactoring session
+      - added profile photo to user model using Active Storage
+    - refactoring session
     
 
 
@@ -248,11 +247,10 @@ Next time:
     
   - What do I want to see on a user's profile page? 
     [x] Username
-    [ ] Profile picture?
+    [x] Profile picture?
     [x] List of the projects they own w/ links to project show pages (displayed as cards?)
     [x] Table containing the user's yarn stash
 
-  - add pictures?
   - styling!
 
 REFACTORING THOUGHTS
