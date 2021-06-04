@@ -20,10 +20,12 @@
 
 <div class="new-projects">
   <h2>Recently Created Projects</h2>
-  <% @new_projects.each do |project| %>
-    <div class="project-card">
-      <h3><%= link_to project.title, project_path(project) %></h3>
-      <p><%= project.user.username %></p>
-    </div>
-  <% end %>
+  <div class="cards">
+    <% @new_projects.each do |project| %>
+      <div class="project-card">
+        <h3><%= link_to project.title, project_path(project) %></h3>
+        <p><%= project.user.username %></p>
+      </div>
+    <% end %>
+  </div>
 </div>

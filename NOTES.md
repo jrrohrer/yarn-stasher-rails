@@ -234,6 +234,12 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - added links to user profiles in the project views & comments section
     - added some basic styling (pulled from previous iteration of this project)
     - displayed user's projects as info cards on their profile page
+  
+  6/4 
+    - screen recording session
+      - add profile photo to user model using Active Storage
+      - add ability to add photos to a project show page
+      - refactoring session
     
 
 

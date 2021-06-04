@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :comments
   has_many :commented_projects, through: :comments, source: 'project'
   # has_many :projects, through: :comments
+  has_one_attached :image
 
   has_secure_password
   validates :username, uniqueness: true, presence: true
