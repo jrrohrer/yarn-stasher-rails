@@ -238,24 +238,20 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
   6/4 
     - screen recording session
       - added profile photo to user model using Active Storage
+      - struggled adding photos to the projects model, so gave up on it...not a requirement and taking too much time.
     - refactoring session
-      - class methods in controllers for setting objects
-      - moving new/edit forms to partials
+      - added class methods in controllers for setting objects
+      - moved new/edit forms to partials for yarn, project, and comment models
     
 
 
 Next time:
-  - What do I want to see on a user's profile page? 
-    [x] Username
-    [x] Profile picture (if they set one when they created the account)
-    [x] List of the projects they own w/ links to project show pages (displayed as cards?)
-    [x] Table containing the user's yarn stash
+  - nested form to add existing yarns to project from create project page? 
 
   - styling!
     - edit/update links to buttons
     - submit buttons
     - sign in with google button on welcome page
     - comments section of project show pages
-
-REFACTORING THOUGHTS
-  - new/edit forms should be made into partials for yarns, projects, and comments
+    - make the comment show page look nicer
+    - get the footer to stick to the bottom of the screen

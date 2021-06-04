@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :require_permission, only: [:edit, :update, :destroy]
+
   def index
     # the only time this will get accessed is if someone views all comments for a project.
     set_project
@@ -58,5 +60,13 @@ class CommentsController < ApplicationController
 
   def set_comment
     @comment = Comment.find_by_id(params[:id])
+  end
+
+  def require_permission
+    comment = Comment.find_by(id: params[:id])
+    if comment.user_id != current_user.id
+      flash[:error] = 'Only the user who created a comment may edit or delete it.'
+      redirect_to comment_path(comment)
+    end
   end
 end
