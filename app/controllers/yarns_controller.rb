@@ -23,8 +23,8 @@ class YarnsController < ApplicationController
 
   def show
     set_yarn
-  end
-
+  end 
+  
   def edit
     set_yarn
   end

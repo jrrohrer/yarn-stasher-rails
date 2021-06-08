@@ -17,15 +17,15 @@
 <table>
     <thead>
         <tr>
-            <th>Brand</a></th>
-            <th>Colorway</a></th>
-            <th>Fiber</a></th>
-            <th>Weight</a></th>
-            <th>Yardage</a></th>
-            <th>Quantity</a></th>
+            <th><%= link_to 'Brand', sort: 'brand_name' %></th>
+            <th><%= link_to 'Colorway', sort: 'colorway' %></th>
+            <th><%= link_to 'Fiber', sort: 'fiber' %></th>
+            <th><%= link_to 'Weight', sort: 'weight' %></th>
+            <th><%= link_to 'Yardage', sort: 'yardage' %></th>
+            <th><%= link_to 'Quantity', sort: 'quantity' %></th>
         </tr>
     </thead>
-    <% @user.yarns.each do |yarn|%>
+    <% @yarns.each do |yarn|%>
         <tr>
             <td><%= link_to yarn.brand_name, yarn_path(yarn) %></td>
             <td><%= yarn.colorway %></td>
