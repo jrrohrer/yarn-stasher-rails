@@ -1,3 +1,17 @@
 // Place all the styles related to the Projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.comment-container {
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 2px 15px;
+  border-radius: 5px;
+  border: 1px solid #d7d6d6;
+  margin: 10px;
+}
+
+.timestamp {
+  font-style: italic;
+  font-size: 12px;
+  color: darkslategray;
+}

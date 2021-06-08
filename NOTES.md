@@ -249,7 +249,7 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
   6/8
     - readme & license updated
     - fixed the redirect path on successful login to go to the home page rather than the user#show page
-    - styled links as buttons
+    - styled links as buttons; customized submit buttons
     - fixed footer position to bottom of page
 
 
@@ -257,9 +257,8 @@ Next time:
   - nested form to add existing yarns to project from create project page? 
 
   - styling!
-    - edit/update links to buttons
-    - submit buttons
     - comments section of project show pages
     - make the comment show page look nicer
+    - make nav bar responsive
     - add icon to nav bar
     - add favicon to browser tab
