@@ -13,10 +13,17 @@
  *= require_tree .
  *= require_self
  */
+html {
+  position: relative;
+  min-height: 100%;
+}
 
 body {
   background-color: #d7d6d6;
   font-family: Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
@@ -58,6 +65,23 @@ a:hover {
   padding: 2.25%; /* 18px / 800px */
   width: 90%;
   text-align: center;
+}
+
+.btn-link {
+  background-color: #2f243a;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.btn-link:hover {
+  background-color: #297373;
+  color: white;
 }
 
 form {
@@ -107,6 +131,7 @@ th {
 }
 
 footer {
+  margin-top: auto;
   background-color: #2f243a;
   color: white;
   padding: 15px;
