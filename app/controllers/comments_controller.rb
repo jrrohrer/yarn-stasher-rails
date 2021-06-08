@@ -27,24 +27,21 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    # add protection so only user who owns comment can edit it 
     set_comment
   end
 
   def update
-    # add protection so only user who owns comment can edit it
     comment = Comment.find_by(id: params[:id])
     comment.update(comment_params)
+    flash[:message] = 'Comment updated successfully.'
     redirect_to project_comment_path(comment.project_id, comment.id)
   end
 
   def destroy
-    # add flash message for successful delete or error message for unsuccessful delete
-    # only the person who made the comment should be able to delete it
     comment = Comment.find_by(id: params[:id])
     project = comment.project_id
     comment.destroy
-
+    flash[:message] = 'Comment successfully deleted.'
     redirect_to project_path(project)
   end
 

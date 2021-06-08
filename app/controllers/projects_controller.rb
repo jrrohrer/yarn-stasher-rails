@@ -14,6 +14,7 @@ class ProjectsController < ApplicationController
     @project.user_id = session[:user_id] # project being created should automatically belong to the user creating it
     @project.save
     if @project.save
+      flash[:message] = 'Project created successfully.'
       redirect_to project_path(@project)
     else
       render :new
@@ -31,13 +32,14 @@ class ProjectsController < ApplicationController
   def update
     project = Project.find_by(id: params[:id])
     project.update(project_params)
+    flash[:message] = 'Project updated successfully.'
     redirect_to project_path(project)
   end
 
   def destroy
     project = Project.find_by(id: params[:id])
     project.destroy
-   
+    flash[:message] = 'Project deleted successfully.'
     redirect_to user_path(current_user)
   end
 

@@ -15,6 +15,7 @@ class YarnsController < ApplicationController
     # is there a better way to do this???? using build method to associate the yarn to a user broke things, and i didn't know how to get the yarn's user_id into the attributes for the project...
     @yarn.save
     if @yarn.save
+      flash[:message] = 'Yarn successfully created!'
       redirect_to yarn_path(@yarn)
     else
       render :new
@@ -32,12 +33,14 @@ class YarnsController < ApplicationController
   def update
     yarn = Yarn.find_by(id: params[:id])
     yarn.update(yarn_params)
+    flash[:message] = 'Yarn successfully updated!'
     redirect_to yarn_path(yarn)
   end
 
   def destroy
     yarn = Yarn.find_by(id: params[:id])
     yarn.destroy
+    flash[:message] = 'Yarn successfully deleted!'
     redirect_to user_path(current_user)
   end
 
