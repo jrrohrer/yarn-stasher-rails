@@ -9,6 +9,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
 
   <body>
@@ -24,6 +25,7 @@
         <%= link_to 'Log In', login_path %> | 
         <%= link_to 'Sign Up', signup_path %>
       <% end %>
+      <%= image_tag('logo.png', class: 'logo') %>
     </nav>
     <div class='wrapper'>
       <% if flash[:error] %>

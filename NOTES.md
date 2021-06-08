@@ -253,12 +253,13 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - fixed footer position to bottom of page
     - styled comment containers
     - made yarn display table on users#show sortable by heading
+    - added flash error/message styling
+    - added field_with_errors styling
+    - added favicon to browser tab
+    - added logo to nav bar & welcome page
 
 
 Next time:
   - nested form to add existing yarns to project from create project page? 
 
-  - styling!
-    - add icon to nav bar
-    - add favicon to browser tab
-    - add stying to field_with_errors
+
