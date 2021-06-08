@@ -1,8 +1,4 @@
-<br>
-<div class='error'>
-  <%= flash[:error] if flash[:error] %>
-</div>
-<br>
+
 <% if @project.user == current_user %>
 <%= link_to 'Edit This Project', edit_project_path(@project) %> | 
 <%= link_to 'Delete This Project', project_path(@project), method: :delete %>
