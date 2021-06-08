@@ -243,9 +243,14 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
       - added class methods in controllers for setting objects
       - moved new/edit forms to partials for yarn, project, and comment models
   
-  6/5 
+  6/7 
     - blog post written
-    - 
+  
+  6/8
+    - readme & license updated
+    - fixed the redirect path on successful login to go to the home page rather than the user#show page
+    - styled links as buttons
+    - fixed footer position to bottom of page
 
 
 Next time:
@@ -254,7 +259,7 @@ Next time:
   - styling!
     - edit/update links to buttons
     - submit buttons
-    - sign in with google button on welcome page
     - comments section of project show pages
     - make the comment show page look nicer
-    - get the footer to stick to the bottom of the screen
+    - add icon to nav bar
+    - add favicon to browser tab

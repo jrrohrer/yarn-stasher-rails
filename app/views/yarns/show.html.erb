@@ -11,5 +11,6 @@
 <% end  %>
 
 <% if @yarn.user_id == current_user.id %>
-  <%= link_to 'Edit This Yarn', edit_yarn_path(@yarn) %> | <%= link_to 'Delete This Yarn', yarn_path(@yarn), method: :delete %>
+  <%= link_to 'Edit This Yarn', edit_yarn_path(@yarn), class: 'btn-link' %>
+  <%= link_to 'Delete This Yarn', yarn_path(@yarn), method: :delete, class: 'btn-link' %>
 <% end %>

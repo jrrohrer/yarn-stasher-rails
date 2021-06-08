@@ -1,11 +1,5 @@
 <h1>Log In</h1>
 
-
-<div class='error'>
-  <%= flash[:error] if flash[:error] %>
-</div>
-<br>
-
 <%= form_for(:user) do |f| %>
   <!-- using a symbol as the arg for form_for so that I can use the formbuilder, and because I'm looking for an existing user, not creating a new one. Basically I'm saying that this form is for the user model, rather than this form is for a user instance -->
   <%= f.label :username %><br>
@@ -14,5 +8,5 @@
   <%= f.label :password %><br>
   <%= f.password_field :password %><br>
 
-  <%= f.submit 'Log In' %>
+  <%= f.submit 'Log In', class: 'submit-btn' %>
 <% end %>

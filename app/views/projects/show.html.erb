@@ -1,7 +1,7 @@
 
 <% if @project.user == current_user %>
-<%= link_to 'Edit This Project', edit_project_path(@project) %> | 
-<%= link_to 'Delete This Project', project_path(@project), method: :delete %>
+<%= link_to 'Edit This Project', edit_project_path(@project), class: 'btn-link' %>
+<%= link_to 'Delete This Project', project_path(@project), method: :delete, class: 'btn-link' %>
 <% end %>
 
 <div class='project-info'>
@@ -30,14 +30,15 @@
 <div class='comments-section'>
   <h2>Comments</h2>
   
-  <%= link_to 'Leave a Comment', new_project_comment_path(@project.id) %> | <%= link_to 'View All Comments', project_comments_path(@project) %>
+  <%= link_to 'Leave a Comment', new_project_comment_path(@project.id), class: 'btn-link' %>
+  <%= link_to 'View All Comments', project_comments_path(@project), class: 'btn-link' %>
   <br>
   <% @project.comments.each do |comment| %>
   <div class="comment_container">
     <h3><%= link_to comment.user.username, user_path(comment.user_id) %>: </h3>
     <p><%= comment.content %></p>
     <p><%= comment.created_at.strftime("Left on %-m/%-d/%Y") %></p>
-    <%= link_to 'View Comment', project_comment_path(@project, comment.id) %>
+    <%= link_to 'View Comment', project_comment_path(@project, comment.id), class: 'btn-link' %>
   </div>
   <% end %>
 </div>

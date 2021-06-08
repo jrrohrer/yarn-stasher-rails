@@ -1,3 +1,5 @@
 <h1>Welcome to Yarn Stasher 2.0!</h1>
 
-<%= link_to('Sign up/Log In with Google', '/auth/google_oauth2', method: :post) %>
+<%= link_to 'Log In', login_path, class: 'btn-link' %><%= link_to 'Sign Up', signup_path, class: 'btn-link' %>
+<br>
+<%= link_to('Sign In with Google', '/auth/google_oauth2', method: :post, class: 'btn-link') %>
