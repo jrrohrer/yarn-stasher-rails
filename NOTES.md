@@ -242,7 +242,10 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - refactoring session
       - added class methods in controllers for setting objects
       - moved new/edit forms to partials for yarn, project, and comment models
-    
+  
+  6/5 
+    - blog post written
+    - 
 
 
 Next time:
