@@ -11,7 +11,8 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    @project.user_id = session[:user_id] # project being created should automatically belong to the user creating it
+    @project.user_id = session[:user_id] 
+
     @project.save
     if @project.save
       flash[:message] = 'Project created successfully.'
@@ -46,7 +47,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :pattern_name, :designer, :craft, :tool_size, :user_id)
+    params.require(:project).permit(:title, :pattern_name, :designer, :craft, :tool_size, :user_id, :yarn_ids)
   end
 
   def require_permission

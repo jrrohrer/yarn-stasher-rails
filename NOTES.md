@@ -257,9 +257,8 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - added field_with_errors styling
     - added favicon to browser tab
     - added logo to nav bar & welcome page
-
-
-Next time:
-  - nested form to add existing yarns to project from create project page? 
+    - added a collection select to the create/update project form to allow users to associate existing yarns to their projects when the projects are created
+    - recorded an app walkthrough and turned in the project for review!!!!
+    
 
 
