@@ -18,5 +18,6 @@ Rails.application.routes.draw do
   resources :yarns
   resources :users
 
+  # this route matches any url that is invalid and will send to the not_found method in the application controller, which renders a 404 page.
   match '*path', to: 'application#not_found', via: [:get, :post]
 end
