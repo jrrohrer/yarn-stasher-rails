@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   end
   resources :yarns
   resources :users
+
+  match '*path', to: 'application#not_found', via: [:get, :post]
 end

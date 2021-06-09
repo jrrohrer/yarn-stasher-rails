@@ -3,6 +3,10 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user, :logged_in
 
+  def not_found
+    render file: "#{Rails.root}/public/404.html"
+  end
+
   private
 
   def current_user

@@ -32,6 +32,7 @@ class ProjectsController < ApplicationController
 
   def update
     project = Project.find_by(id: params[:id])
+    byebug
     project.update(project_params)
     flash[:message] = 'Project updated successfully.'
     redirect_to project_path(project)
@@ -47,7 +48,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :pattern_name, :designer, :craft, :tool_size, :user_id, :yarn_ids)
+    params.require(:project).permit(:title, :pattern_name, :designer, :craft, :tool_size, :user_id, yarn_ids: [])
   end
 
   def require_permission
