@@ -9,14 +9,15 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get '/home', to: 'users#index'
 
+  # google oauth callback route
   get '/auth/google_oauth2/callback', to: 'sessions#omniauth'
 
   resources :comments
   resources :projects do 
     resources :comments, only: [:index, :new, :create, :show]
   end
-  resources :yarns
-  resources :users
+  resources :yarns, only: [:new, :create, :show, :edit, :update, :destroy]
+  resources :users, only: [:new, :create, :show]
 
   # this route matches any url that is invalid and will send to the not_found method in the application controller, which renders a 404 page.
   match '*path', to: 'application#not_found', via: [:get, :post]
