@@ -260,5 +260,11 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - added a collection select to the create/update project form to allow users to associate existing yarns to their projects when the projects are created
     - recorded an app walkthrough and turned in the project for review!!!!
     
+  6/10
+    - added 404 page for unknown routes.
+    - cleaned up routes
+
+  NEXT TIME
+    - add 404 page handling for dynamic routes (like yarns/432, where yarn with id 432 doesn't exist)
 
 

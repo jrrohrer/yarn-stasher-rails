@@ -7,13 +7,15 @@ class YarnsController < ApplicationController
   end
 
   def create
-    @yarn = Yarn.new(yarn_params)
-    @yarn.user_id = session[:user_id]
-    if @yarn.project
-      @yarn.project.user_id = session[:user_id]
-    end
-    # is there a better way to do this???? using build method to associate the yarn to a user broke things, and i didn't know how to get the yarn's user_id into the attributes for the project...
-    @yarn.save
+    byebug
+    #@yarn = Yarn.new(yarn_params)
+    #@yarn.user_id = session[:user_id]
+    @yarn = current_user.yarns.create(yarn_params) # replaces previous two lines
+    #if @yarn.project
+      #@yarn.project.user_id = session[:user_id]
+    #end
+
+    #@yarn.save
     if @yarn.save
       flash[:message] = 'Yarn successfully created!'
       redirect_to yarn_path(@yarn)

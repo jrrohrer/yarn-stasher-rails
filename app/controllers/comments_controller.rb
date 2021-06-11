@@ -9,7 +9,6 @@ class CommentsController < ApplicationController
   def new
     set_project
     @comment = @project.comments.build
-    byebug
   end
 
   def create
