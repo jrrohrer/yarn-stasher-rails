@@ -6,6 +6,11 @@ class CommentsController < ApplicationController
     set_project
   end
 
+  def ordered_comments
+    @comments = Comment.ordered_comments
+    render :index
+  end
+
   def new
     set_project
     @comment = @project.comments.build

@@ -1,10 +1,9 @@
-<h1>Comments on <%= @project.title %></h1>
+<h1>All Comments: </h1>
 
-<% @project.comments.each do |comment| %>
-  <div class="comment_container">
+<% @comments.each do |comment| %>
+  <div> 
     <h3><%= link_to comment.user.username, user_path(comment.user_id) %>: </h3>
     <p><%= comment.content %></p>
     <p><%= comment.created_at.strftime("Left on %-m/%-d/%Y") %></p>
-    <%= link_to 'View Comment', project_comment_path(@project, comment.id), class: 'btn-link' %>
   </div>
 <% end %>

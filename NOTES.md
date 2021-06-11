@@ -264,7 +264,11 @@ https://github.com/hansenjl/MyBlog (Jen Hansen's MyBlog repo)
     - added 404 page for unknown routes.
     - cleaned up routes
 
+  6/11
+    - PASSED ASSESSMENT :D
+
   NEXT TIME
     - add 404 page handling for dynamic routes (like yarns/432, where yarn with id 432 doesn't exist)
+    - add control flow to update methods :x
 
 

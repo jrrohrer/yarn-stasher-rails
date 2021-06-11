@@ -10,10 +10,10 @@ class YarnsController < ApplicationController
     #@yarn = Yarn.new(yarn_params)
     #@yarn.user_id = session[:user_id]
     @yarn = current_user.yarns.create(yarn_params) # replaces previous two lines; makes following if statement unneccessary
-
-    #if @yarn.project
-      #@yarn.project.user_id = session[:user_id]
-    #end
+   
+    if @yarn.project
+      @yarn.project.user_id = session[:user_id]
+    end
 
     #@yarn.save (don't need this now; line 13 creates and saves if valid)
     if @yarn.save
