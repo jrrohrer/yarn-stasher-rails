@@ -7,15 +7,15 @@ class YarnsController < ApplicationController
   end
 
   def create
-    byebug
     #@yarn = Yarn.new(yarn_params)
     #@yarn.user_id = session[:user_id]
-    @yarn = current_user.yarns.create(yarn_params) # replaces previous two lines
+    @yarn = current_user.yarns.create(yarn_params) # replaces previous two lines; makes following if statement unneccessary
+
     #if @yarn.project
       #@yarn.project.user_id = session[:user_id]
     #end
 
-    #@yarn.save
+    #@yarn.save (don't need this now; line 13 creates and saves if valid)
     if @yarn.save
       flash[:message] = 'Yarn successfully created!'
       redirect_to yarn_path(@yarn)
